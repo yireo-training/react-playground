@@ -35,13 +35,13 @@ var config = {
     ]
   },
   plugins: [
-    new FriendlyErrorsWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: "./src/index.html",
       filename: "index.html",
       inject: "body"
-        }),
-    new HardSourceWebpackPlugin()
+    }),
+    new HardSourceWebpackPlugin(),
+    new FriendlyErrorsWebpackPlugin()
   ]
 };
 

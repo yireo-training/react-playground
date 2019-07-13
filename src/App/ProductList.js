@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Product from './Product';
+import Product from './ProductList/Product';
 
 class ProductList extends Component {
     constructor() {

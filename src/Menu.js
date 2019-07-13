@@ -1,6 +1,6 @@
 import React from "react";
 import "./Menu.css";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import MenuItem from '@material-ui/core/MenuItem';

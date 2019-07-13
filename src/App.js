@@ -1,10 +1,11 @@
 import React from "react";
-import Menu from "./Menu.js";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import "./App.css";
-import Home from "./Home.js";
-import ProductList from "./ProductList.js";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Container from "@material-ui/core/Container";
+
+import "./App.css";
+import Menu from "./Menu.js";
+import Home from "./App/Home.js";
+import ProductList from "./App/ProductList.js";
 
 class App extends React.Component {
   constructor(props) {
@@ -24,8 +25,6 @@ class App extends React.Component {
       ],
       counter: 0
     };
-
-    this.pushMenuItemToState = this.pushMenuItemToState.bind(this);
   }
 
   pushMenuItemToState = (menuItem) => {
