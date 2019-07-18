@@ -13,7 +13,8 @@ var config = {
     publicPath: "/"
   },
   devServer: {
-    overlay: true
+    overlay: true,
+    historyApiFallback: true
   },
   mode: "development",
   module: {

@@ -3,26 +3,17 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Container from "@material-ui/core/Container";
 
 import "./App.css";
-import Menu from "./Menu.js";
-import Home from "./App/Home.js";
-import ProductList from "./App/ProductList.js";
+import Menu from "./Menu";
+import HomePage from "./App/Home";
+import CounterPage from "./App/Counter";
+import ProductsPage from "./App/Products";
+import menuItems from "./menuItems";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      menuItems: [
-        {
-          id: "home",
-          name: "Home",
-          link: ""
-        },
-        {
-          id: "products",
-          name: "Products",
-          link: "products"
-        }
-      ],
+      menuItems: menuItems,
       counter: 0
     };
   }
@@ -43,10 +34,11 @@ class App extends React.Component {
               <Route
                 exact
                 path="/"
-                component={Home}
+                component={HomePage}
                 pushMenuItemToState={this.pushMenuItemToState}
               />
-              <Route path="/products" component={ProductList} />
+              <Route path="/counter" component={CounterPage} />
+              <Route path="/products" component={ProductsPage} />
             </div>
           </Container>
         </div>

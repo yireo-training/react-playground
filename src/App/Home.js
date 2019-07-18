@@ -1,12 +1,10 @@
 import React from 'react';
 import Greeting from './Home/Greeting';
-import CounterWrapper from './Home/CounterWrapper';
 
-const Home = (props) => {
+const Home = () => {
     return (
         <div>
             <h1><Greeting name="Jisse" /></h1>
-            <CounterWrapper />
         </div>
     );
 }
