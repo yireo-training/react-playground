@@ -3,7 +3,6 @@ const net = require("net");
 
 const FriendlyErrorsWebpackPlugin = require("friendly-errors-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const HardSourceWebpackPlugin = require("hard-source-webpack-plugin");
 
 var config = {
   entry: "./src/index.js",
@@ -20,13 +19,13 @@ var config = {
   module: {
     rules: [
       {
-        test: /\.css$/,
-        use: [{ loader: "style-loader" }, { loader: "css-loader" }]
-      },
-      {
         test: /\.gql$/,
         exclude: /node_modules/,
-        use: [{ loader: "graphql-tag/loader" }]
+        loader: "graphql-tag/loader"
+      },
+      {
+        test: /\.css$/,
+        use: [{ loader: "style-loader" }, { loader: "css-loader" }]
       },
       {
         test: /\.js$/,
@@ -46,7 +45,6 @@ var config = {
       filename: "index.html",
       inject: "body"
     }),
-    new HardSourceWebpackPlugin(),
     new FriendlyErrorsWebpackPlugin()
   ]
 };
