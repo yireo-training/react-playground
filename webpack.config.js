@@ -23,6 +23,11 @@ var config = {
         use: [{ loader: "style-loader" }, { loader: "css-loader" }]
       },
       {
+        test: /\.gql$/,
+        exclude: /node_modules/,
+        use: [{ loader: "graphql-tag/loader" }]
+      },
+      {
         test: /\.js$/,
         exclude: /node_modules/,
         use: "babel-loader"
