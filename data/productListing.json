@@ -1,0 +1,47 @@
+{
+  "data": {
+    "products": {
+      "items": [
+        {
+          "id": 1116,
+          "name": "Carina Cardigan",
+          "sku": "VSW01",
+          "small_image": {
+            "label": "Main",
+            "url": "http://m2.betelgeuse.yr/media/catalog/product/cache/2038efcce6d5bb32864aea9c5ecaa20e/v/s/vsw01-rn_main_2.jpg"
+          },
+          "swatch_image": null,
+          "description": {
+            "__html": "<p>The Carina Cardigan is the perfect complement to a breezy summer evening. The loose knit, lightweight cotton fabric moves with you and provides just the right amount of breathable warmth.</p><p>Features:</p><ul><li>Open front </li><li>3/4 sleeve</li><li>Tapered to hip </li><li>Specked design </li><li>Dry clean recommended </li></ul>"
+          }
+        },
+        {
+          "id": 1110,
+          "name": "Brigid Boucle Cardigan",
+          "sku": "VSW07",
+          "small_image": {
+            "label": "Main",
+            "url": "http://m2.betelgeuse.yr/media/catalog/product/cache/2038efcce6d5bb32864aea9c5ecaa20e/v/s/vsw07-mt_main_2.jpg"
+          },
+          "swatch_image": null,
+          "description": {
+            "__html": "<p>The Brigid Cardigan brings texture and richness to any outfit. Perfect over a tank and jeans or your favorite sundress. This sweater can be dressed up or down depending on your mood. </p><p>Features:</p><ul><li>Open front</li><li>3/4 sleeve</li><li>Sit below the hip</li><li>Versatile</li><li>Machine wash, line dry</li></ul>"
+          }
+        },
+        {
+          "id": 1093,
+          "name": "Jillian Top",
+          "sku": "VT12",
+          "small_image": {
+            "label": "Main",
+            "url": "http://m2.betelgeuse.yr/media/catalog/product/cache/2038efcce6d5bb32864aea9c5ecaa20e/v/t/vt12-kh_main_2.jpg"
+          },
+          "swatch_image": null,
+          "description": {
+            "__html": "<p>The Jillian Top takes a wardrobe essential and kicks it up a notch with soft, heathered material and lace detail. Next time you feel like wearing a t-shirt, grab this instead. Comfort can look this good.  </p><p>Features:</p><ul><li>Crewneck</li><li>Capped sleeve</li><li>Sits on the hips</li><li>Longer back hemline</li><li>Machine wash, line dry</li></ul>"
+          }
+        }
+      ]
+    }
+  }
+}
