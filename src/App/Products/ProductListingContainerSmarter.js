@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Product from "./Product";
+import ProductListing from "./ProductListing";
 import graphqlClient from "../../utils/graphqlClient";
 import productListingQuery from "../../queries/productListing.gql";
 
@@ -40,25 +40,7 @@ class ProductListingBasic extends Component {
   }
 
   render() {
-    if (this.state.error) {
-      return <p>Sorry! There was an error loading the products</p>;
-    }
-
-    if (this.state.isLoading) {
-      return <p>Loading…</p>;
-    }
-
-    if (this.state.products.length === 0) {
-      return <p>No products found</p>;
-    }
-
-    return (
-      <ul>
-        {this.state.products.map(product => (
-          <Product key={product.id} item={product} />
-        ))}
-      </ul>
-    );
+    return <ProductListing error={this.state.error} isLoading={this.state.isLoading} products={this.state.products} />
   }
 }
 

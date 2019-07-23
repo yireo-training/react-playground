@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Product from "./Product";
+import ProductListing from "./ProductListing";
 import productListingQuery from "../../queries/productListing.gql";
 import graphqlClient from "../../utils/graphqlClient";
 
@@ -30,25 +30,7 @@ const ProductListingFunctional = props => {
     );
   }, []);
 
-  if (error) {
-    return <p>Sorry! There was an error loading the products</p>;
-  }
-
-  if (isLoading) {
-    return <p>Loading…</p>;
-  }
-
-  if (products.length === 0) {
-    return <p>No products found</p>;
-  }
-
-  return (
-    <ul>
-      {products.map(product => (
-        <Product key={product.id} item={product} />
-      ))}
-    </ul>
-  );
+  return <ProductListing error={error} isLoading={isLoading} products={products} />
 };
 
 export default ProductListingFunctional;

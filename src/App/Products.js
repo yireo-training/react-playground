@@ -1,11 +1,13 @@
 import React from 'react';
-import ProductListing from './Products/ProductListingBasic';
-//import ProductListing from './Products/ProductListingSmarter';
-//import ProductListing from './Products/ProductListingFunctional';
+import ProductListingContainer from './Products/ProductListingContainerBasic';
+//import ProductListingContainer from './Products/ProductListingContainerSmarter';
+//import ProductListingContainer from './Products/ProductListingContainerFunctional';
 
 const Products = () => {
     return (
-        <ProductListing search="Woo" />
+        <React.Fragment>
+            <ProductListingContainer search="Woo" />
+        </React.Fragment>
     )
 }
 

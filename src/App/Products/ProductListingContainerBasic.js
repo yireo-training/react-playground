@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Product from "./Product";
+import Product from "./SingleProduct";
 
 class ProductListingBasic extends Component {
   constructor() {
@@ -37,7 +37,8 @@ class ProductListingBasic extends Component {
         `;
   }
 
-  fetchData(url) {
+  fetchData() {
+    let url = "http://m2.betelgeuse.yr/graphql";
     this.setState({ isLoading: true });
     fetch(url, {
       method: "POST",
@@ -64,7 +65,7 @@ class ProductListingBasic extends Component {
   }
 
   componentDidMount() {
-    this.fetchData("http://m2.betelgeuse.yr/graphql");
+    this.fetchData();
   }
 
   render() {
