@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import Product from "./SingleProduct";
 
-class ProductListingBasic extends Component {
-  constructor() {
-    super();
+class ProductListingContainerBasic extends Component {
+  constructor(props) {
+    super(props);
+
+    this.errorMsg = "Something went wrong";
     this.state = {
       products: [],
       error: false,
@@ -70,7 +72,7 @@ class ProductListingBasic extends Component {
 
   render() {
     if (this.state.error) {
-      return <p>Sorry! There was an error loading the products</p>;
+      return <p>{this.errorMsg}</p>;
     }
 
     if (this.state.isLoading) {
@@ -91,4 +93,4 @@ class ProductListingBasic extends Component {
   }
 }
 
-export default ProductListingBasic;
+export default ProductListingContainerBasic;

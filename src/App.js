@@ -4,9 +4,9 @@ import Container from "@material-ui/core/Container";
 
 import "./App.css";
 import Menu from "./Menu";
-import HomePage from "./App/Home";
-import CounterPage from "./App/Counter";
-import ProductsPage from "./App/Products";
+import HomePage from "./App/Pages/HomePage";
+import CounterPage from "./App/Pages/CounterPage";
+import ProductsPage from "./App/Pages/ProductsPage";
 import menuItems from "./menuItems";
 
 class App extends React.Component {

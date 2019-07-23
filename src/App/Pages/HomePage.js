@@ -1,7 +1,7 @@
 import React from 'react';
-import Greeting from './Home/Greeting';
+import Greeting from '../Home/Greeting';
 
-const Home = () => {
+const HomePage = () => {
     return (
         <div>
             <h1><Greeting name="Jisse" /></h1>
@@ -9,4 +9,4 @@ const Home = () => {
     );
 }
 
-export default Home;
+export default HomePage;

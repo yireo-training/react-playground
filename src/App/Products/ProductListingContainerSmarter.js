@@ -3,7 +3,7 @@ import ProductListing from "./ProductListing";
 import graphqlClient from "../../utils/graphqlClient";
 import productListingQuery from "../../queries/productListing.gql";
 
-class ProductListingBasic extends Component {
+class ProductListingContainerSmarter extends Component {
   constructor() {
     super();
     this.state = {
@@ -44,4 +44,4 @@ class ProductListingBasic extends Component {
   }
 }
 
-export default ProductListingBasic;
+export default ProductListingContainerSmarter;

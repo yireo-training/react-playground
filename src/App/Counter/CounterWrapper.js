@@ -1,20 +1,16 @@
-import React from "react";
+import React, { Component, useState }  from "react";
 import Counter from "./Counter";
 
-class CounterWrapper extends React.Component {
+class CounterWrapper extends Component {
   constructor(props) {
     super(props);
-    this.state = { active: true, counter: 0 };
+    this.state = { counter: 0 };
   }
 
   incrementCounter() {
     this.setState(function(oldState) {
       return { counter: oldState.counter + 1 };
     });
-  }
-
-  componentDidUpdate() {
-    console.log("update");
   }
 
   render() {

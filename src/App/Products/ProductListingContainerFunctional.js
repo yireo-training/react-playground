@@ -3,7 +3,7 @@ import ProductListing from "./ProductListing";
 import productListingQuery from "../../queries/productListing.gql";
 import graphqlClient from "../../utils/graphqlClient";
 
-const ProductListingFunctional = props => {
+const ProductListingContainerFunctional = props => {
   const [products, setProducts] = useState([]);
   const [error, setError] = useState(false);
   const [isLoading, setLoading] = useState(false);
@@ -33,4 +33,4 @@ const ProductListingFunctional = props => {
   return <ProductListing error={error} isLoading={isLoading} products={products} />
 };
 
-export default ProductListingFunctional;
+export default ProductListingContainerFunctional;
