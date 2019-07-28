@@ -4,7 +4,7 @@ const Product = (props) => (
     <li>
         {props.item.name} [{props.item.sku}]
         <img width="40" src={props.item.small_image.url} />
-        <p dangerouslySetInnerHTML={props.item.description}></p>
+        <div dangerouslySetInnerHTML={props.item.description}></div>
     </li>
 );  
 
