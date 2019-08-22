@@ -6,6 +6,7 @@ import "./App.css";
 import Menu from "./Menu";
 import HomePage from "./App/Pages/HomePage";
 import CounterPage from "./App/Pages/CounterPage";
+import ClockPage from "./App/Pages/ClockPage";
 import ProductsPage from "./App/Pages/ProductsPage";
 import menuItems from "./menuItems";
 
@@ -38,6 +39,7 @@ class App extends React.Component {
                 pushMenuItemToState={this.pushMenuItemToState}
               />
               <Route path="/counter" component={CounterPage} />
+              <Route path="/clock" component={ClockPage} />
               <Route path="/products" component={ProductsPage} />
             </div>
           </Container>

@@ -10,6 +10,11 @@ export default [
       link: "counter"
     },
     {
+      id: "clock",
+      name: "Clock",
+      link: "clock"
+    },
+    {
       id: "products",
       name: "Products",
       link: "products"
