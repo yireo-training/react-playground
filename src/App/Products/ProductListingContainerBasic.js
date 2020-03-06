@@ -40,7 +40,7 @@ class ProductListingContainerBasic extends Component {
   }
 
   fetchData() {
-    let url = "http://m2.betelgeuse.yr/graphql";
+    let url = "http://m2.sirius.yr/graphql";
     this.setState({ isLoading: true });
     fetch(url, {
       method: "POST",
