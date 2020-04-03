@@ -10,7 +10,7 @@ import ClockPage from "./App/Pages/ClockPage";
 import ProductsPage from "./App/Pages/ProductsPage";
 import menuItems from "./menuItems";
 
-const Slow = React.lazy(() => import('./Slow'));
+const Slow = React.lazy(() => import('./App/Slow'));
 
 class App extends React.Component {
   constructor(props) {
