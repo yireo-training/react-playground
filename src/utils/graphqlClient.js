@@ -1,6 +1,8 @@
+import config from "../config";
+
 let graphqlClient = function(url) {
     if (!url) {
-        url = "http://m2.betelgeuse.yr/index.php/graphql";
+        url = config.url;
     }
 
     this.url = url;

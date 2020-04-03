@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Product from "./SingleProduct";
+import config from "../../config";
 
 class ProductListingContainerBasic extends Component {
   constructor(props) {
@@ -40,8 +41,7 @@ class ProductListingContainerBasic extends Component {
   }
 
   fetchData() {
-    let url = "http://m2.sirius.yr/graphql";
-    //let url = "https://cors-anywhere.herokuapp.com/https://pwa-studio.yireo-demo.com/graphql";
+    let url = config.url;
     this.setState({ isLoading: true });
     fetch(url, {
       method: "POST",
