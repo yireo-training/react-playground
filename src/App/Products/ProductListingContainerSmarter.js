@@ -20,22 +20,18 @@ class ProductListingContainerSmarter extends Component {
   componentDidMount() {
     const client = new graphqlClient();
 
-    const onAjaxSuccess = responseJson => {
-      this.setState({
-        isLoading: false,
-        products: responseJson.data.products.items
-      });
-    };
-
-    const onAjaxError = error => {
-      this.setState({ error: error, isLoading: false });
-    };
-
     client.fetch(
       productListingQuery.loc.source.body,
       this.getVariables(),
-      onAjaxSuccess,
-      onAjaxError
+      responseJson => {
+        this.setState({
+          isLoading: false,
+          products: responseJson.data.products.items
+        });
+      },
+      error => {
+        this.setState({ error: error, isLoading: false });
+      }
     );
   }
 

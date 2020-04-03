@@ -11,26 +11,24 @@ const ProductListingContainerFunctional = props => {
   let variables = { search: props.search };
   const client = new graphqlClient();
 
-  const onAjaxSuccess = responseJson => {
-    setLoading(false);
-    setProducts(responseJson.data.products.items);
-  };
-
-  const onAjaxFailure = error => {
-    setError(error);
-  };
-
   useEffect(() => {
     setLoading(true);
     client.fetch(
       productListingQuery.loc.source.body,
       variables,
-      onAjaxSuccess,
-      onAjaxFailure
+      responseJson => {
+        setLoading(false);
+        setProducts(responseJson.data.products.items);
+      },
+      error => {
+        setError(error);
+      }
     );
   }, []);
 
-  return <ProductListing error={error} isLoading={isLoading} products={products} />
+  return (
+    <ProductListing error={error} isLoading={isLoading} products={products} />
+  );
 };
 
 export default ProductListingContainerFunctional;

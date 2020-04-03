@@ -41,6 +41,7 @@ class ProductListingContainerBasic extends Component {
 
   fetchData() {
     let url = "http://m2.sirius.yr/graphql";
+    //let url = "https://cors-anywhere.herokuapp.com/https://pwa-studio.yireo-demo.com/graphql";
     this.setState({ isLoading: true });
     fetch(url, {
       method: "POST",
