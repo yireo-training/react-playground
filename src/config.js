@@ -1,5 +1,5 @@
 const config = {
-    'url':'http://magento4.yr/graphql'
+    'url':'https://pwa-studio.yireo-demo.com/graphql'
 };
 
 export default config;
