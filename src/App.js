@@ -31,10 +31,6 @@ class App extends React.Component {
     return (
       <Router>
         <div id="root">
-          <React.Suspense fallback={<div>Loading ...</div>}>
-            <Slow />
-          </React.Suspense>
-
           <Container maxWidth="lg">
             <Menu items={this.state.menuItems} />
             <div className="content">
@@ -49,6 +45,10 @@ class App extends React.Component {
               <Route path="/products" component={ProductsPage} />
             </div>
           </Container>
+
+          <React.Suspense fallback={<div>Loading ...</div>}>
+            <Slow />
+          </React.Suspense>
         </div>
       </Router>
     );
