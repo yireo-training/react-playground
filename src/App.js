@@ -10,7 +10,6 @@ import ClockPage from "./App/Pages/ClockPage";
 import ProductsPage from "./App/Pages/ProductsPage";
 import menuItems from "./menuItems";
 
-const Slow = React.lazy(() => import('./App/Slow'));
 
 class App extends React.Component {
   constructor(props) {
@@ -45,10 +44,6 @@ class App extends React.Component {
               <Route path="/products" component={ProductsPage} />
             </div>
           </Container>
-
-          <React.Suspense fallback={<div>Loading ...</div>}>
-            <Slow />
-          </React.Suspense>
         </div>
       </Router>
     );
