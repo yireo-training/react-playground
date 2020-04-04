@@ -1,5 +1,5 @@
 import React from 'react';
-import CounterWrapper from '../Counter/CounterWrapper';
+import CounterWrapper from '../Counter/CounterWrapperRedux';
 
 const CounterPage = (props) => {
     return (
