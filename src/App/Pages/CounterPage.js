@@ -1,7 +1,7 @@
 import React from 'react';
 import CounterWrapper from '../Counter/CounterWrapperRedux';
 
-const CounterPage = (props) => {
+const CounterPage = () => {
     return (
         <div>
             <CounterWrapper />

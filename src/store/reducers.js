@@ -1,5 +1,23 @@
-const incrementReducer = function (state, action) {
-  return action.type === "INC" ? state + action.payload : state;
+import {combineReducers} from "redux";
+
+const incrementReducer = function (incrementState, action) {
+  if (incrementState === null || incrementState === undefined) {
+    return 0;
+  }
+
+  if (action.type !== "INC") {
+    return incrementState;
+  }
+
+  return incrementState + action.payload;
 };
 
-export default incrementReducer;
+const customReducer = (state,action ) => {
+  if(!state) {
+    return {};
+  }
+
+  return state;
+}
+
+export default combineReducers({increment: incrementReducer, custom: customReducer});
