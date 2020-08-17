@@ -1,18 +1,23 @@
 import {combineReducers} from "redux";
+import actionTypes from "./actionTypes";
+
+const incrementReducerByAction = function(incrementState, action) {
+  return incrementState + action.payload;
+}
 
 const incrementReducer = function (incrementState, action) {
   if (incrementState === null || incrementState === undefined) {
     return 0;
   }
 
-  if (action.type !== "INC") {
+  if (action.type !== actionTypes.INC) {
     return incrementState;
   }
 
-  return incrementState + action.payload;
+  return incrementReducerByAction(incrementState, action);
 };
 
-const customReducer = (state,action ) => {
+const customReducer = state => {
   if(!state) {
     return {};
   }
