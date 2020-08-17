@@ -1,14 +1,20 @@
-import React from 'react';
-import ProductListingContainer from '../Products/ProductListingContainerBasic';
+import React, { useState } from 'react';
+//import ProductListingContainer from '../Products/ProductListingContainerBasic';
 //import ProductListingContainer from '../Products/ProductListingContainerSmarter';
-//import ProductListingContainer from '../Products/ProductListingContainerFunctional';
+import ProductListingContainer from '../Products/ProductListingContainerFunctional';
 //import ProductListingContainer from '../Products/ProductListingContainerTest';
-//import ProductListingContainer from '../Products/ProductListingContainerFunctional2';
 
 const ProductsPage = () => {
+    const [search, setSearch] = useState('Dress');
+
+    const onSearchChange = (event) => { 
+        setSearch(event.target.value); 
+    }
+
     return (
         <React.Fragment>
-            <ProductListingContainer search="Hoo" />
+            <input type="text" onChange={onSearchChange} />
+            <ProductListingContainer search={search} />
         </React.Fragment>
     )
 }

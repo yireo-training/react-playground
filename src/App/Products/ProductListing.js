@@ -15,11 +15,14 @@ const ProductListing = props => {
   }
 
   return (
+    <>
+    <h3>Search: {props.search}</h3>
     <ul>
       {props.products.map(product => (
         <Product key={product.id} item={product} />
       ))}
     </ul>
+    </>
   );
 };
 

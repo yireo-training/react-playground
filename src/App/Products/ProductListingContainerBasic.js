@@ -71,6 +71,12 @@ class ProductListingContainerBasic extends Component {
     this.fetchData();
   }
 
+  componentDidUpdate(props) {
+    if (this.props.search !== props.search) {
+      this.fetchData();
+    }
+  }
+
   render() {
     if (this.state.error) {
       return <p>{this.errorMsg}</p>;
