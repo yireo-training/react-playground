@@ -15,7 +15,7 @@ const ProductListingContainerFunctional = props => {
     let variables = { search: props.search };
     setLoading(true);
     client.fetch(
-      productListingQuery,
+      productListingQuery.loc.source.body,
       variables,
       responseJson => {
         setLoading(false);
