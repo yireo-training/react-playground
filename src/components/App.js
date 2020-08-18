@@ -8,8 +8,7 @@ import HomePage from "./App/Pages/HomePage";
 import CounterPage from "./App/Pages/CounterPage";
 import ClockPage from "./App/Pages/ClockPage";
 import ProductsPage from "./App/Pages/ProductsPage";
-import menuItems from "./menuItems";
-
+import menuItems from "../data/menuItems";
 
 class App extends React.Component {
   constructor(props) {

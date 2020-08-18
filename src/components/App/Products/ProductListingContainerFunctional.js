@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import ProductListing from "./ProductListing";
 import { loader } from 'graphql.macro';
-import graphqlClient from "../../utils/graphqlClient";
+import graphqlClient from "../../../utils/graphqlClient";
 
-const productListingQuery = loader("../../queries/productListing.gql");
+const productListingQuery = loader("../../../queries/productListing.gql");
 const client = new graphqlClient();
 
 const ProductListingContainerFunctional = props => {

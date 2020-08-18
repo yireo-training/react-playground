@@ -1,6 +1,6 @@
 import React from "react";
 import Counter from "./Counter";
-import useCounter from "../../store/hooks";
+import useCounter from "../../../store/hooks";
 
 const CounterWrapper = () => {
   const [counter, setCounter] = useCounter();

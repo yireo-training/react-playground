@@ -1,0 +1,2 @@
+(this.webpackJsonpbasics=this.webpackJsonpbasics||[]).push([[3],{74:function(n,e,t){"use strict";t.r(e);var a=t(0),s=t.n(a);!function(n){var e=new Date,t=null;do{t=new Date}while(t-e<n)}(1500);e.default=function(){return s.a.createElement("div",null,"Slow content")}}}]);
+//# sourceMappingURL=3.cc89886e.chunk.js.map

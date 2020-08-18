@@ -4,9 +4,11 @@ const Slow = React.lazy(() => import("./Slow"));
 
 const SlowLoader = () => {
   return (
+    <>
     <React.Suspense fallback={<div>Loading ...</div>}>
       <Slow />
     </React.Suspense>
+    </>
   );
 };
 
